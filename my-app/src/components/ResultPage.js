@@ -1,4 +1,4 @@
-﻿import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../components_css/ResultPage.css";
 
 function formatCategoryName(slug) {
@@ -69,7 +69,7 @@ export default function ResultPage() {
     <main className="result-main-content">
       <section className="result-summary-panel">
         <div className="result-summary-header">
-          <div className="result-summary-icon">🏆</div>
+          <div className="result-summary-icon">??</div>
           <div>
             <p className="summary-status">Quiz Complete!</p>
             <h1 className="summary-title">{categoryName}</h1>
@@ -109,7 +109,7 @@ export default function ResultPage() {
           results.map((item, index) => (
             <div key={index} className={`analytics-item ${item.correct ? "correct" : "incorrect"}`}>
               <div className="analytics-header">
-                <span className="analytics-status">{item.correct ? "✔" : "✕"}</span>
+                <span className="analytics-status">{item.correct ? "?" : "?"}</span>
                 <div>
                   <h3 className="analytics-question">{item.question}</h3>
                 </div>

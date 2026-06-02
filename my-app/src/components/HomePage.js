@@ -1,4 +1,4 @@
-﻿import "../components_css/HomePage.css";
+import "../components_css/HomePage.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -136,7 +136,7 @@ export default function HomePage() {
         )}
       </main>
       <footer className="home-footer">
-        <p className="footer-text">© 2024 QuizMaster. All rights reserved.</p>
+        <p className="footer-text">� 2024 QuizMaster. All rights reserved.</p>
       </footer>
     </>
   );

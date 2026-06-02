@@ -1,5 +1,6 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import quizData from "../data/quizData";
 import "../components_css/QuizPage.css";
 
 function formatCategoryName(slug) {
@@ -47,32 +48,25 @@ export default function QuizPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    async function fetchQuiz() {
-      setLoading(true);
-      setError("");
-      setCurrentIndex(0);
-      setSelectedOption(null);
-      setRemovedOptions([]);
-      setScore(0);
-      setHintCount(getHintCount(difficulty));
-      setQuestionResults([]);
-      setTimeLeft(effectiveTimer === "none" ? null : parseInt(effectiveTimer, 10));
+    setLoading(true);
+    setError("");
+    setCurrentIndex(0);
+    setSelectedOption(null);
+    setRemovedOptions([]);
+    setScore(0);
+    setHintCount(getHintCount(difficulty));
+    setQuestionResults([]);
+    setTimeLeft(effectiveTimer === "none" ? null : parseInt(effectiveTimer, 10));
 
-      try {
-        const response = await fetch(`/api/quiz/${categorySlug}`);
-        if (!response.ok) {
-          throw new Error("Failed to load quiz questions.");
-        }
-        const data = await response.json();
-        setQuestions(data);
-      } catch (fetchError) {
-        setError("Could not load quiz questions. Make sure the backend is running.");
-      } finally {
-        setLoading(false);
-      }
+    const categoryQuestions = quizData[categorySlug] || quizData.general_knowledge;
+    if (!categoryQuestions.length) {
+      setError("Selected category does not have quiz questions.");
+      setQuestions([]);
+    } else {
+      setQuestions(categoryQuestions);
     }
 
-    fetchQuiz();
+    setLoading(false);
   }, [categorySlug, difficulty, effectiveTimer]);
 
   useEffect(() => {
@@ -95,6 +89,7 @@ export default function QuizPage() {
     return () => clearInterval(timerId);
   }, [effectiveTimer, questions.length]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (timeLeft === 0 && effectiveTimer !== "none" && questions.length) {
       handleSkip();
@@ -235,7 +230,7 @@ export default function QuizPage() {
     <main className="quiz-main-content">
       <div className="quiz-header">
         <button className="quiz-back-button" onClick={handleQuit}>
-          ← Quit Quiz
+          ï¿½ Quit Quiz
         </button>
         <div className="quiz-category-chip">
           <span>{formatCategoryName(categorySlug)}</span>
@@ -256,7 +251,7 @@ export default function QuizPage() {
         </div>
 
         <div className="timer-card">
-          <span>{effectiveTimer === "none" ? "∞" : timeLeft}</span>
+          <span>{effectiveTimer === "none" ? "?" : timeLeft}</span>
           <small style={{ marginLeft: 12 }}>{effectiveTimer === "none" ? "No timer" : "Seconds"}</small>
         </div>
       </div>
