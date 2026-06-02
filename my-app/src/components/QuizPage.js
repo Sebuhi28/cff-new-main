@@ -234,7 +234,7 @@ export default function QuizPage() {
     <main className="quiz-main-content">
       <div className="quiz-header">
         <button className="quiz-back-button" onClick={handleQuit}>
-          ï¿½ Quit Quiz
+          ← Quit Quiz
         </button>
         <div className="quiz-category-chip">
           <span>{formatCategoryName(categorySlug)}</span>
