@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import quizData from "../data/quizData";
 import "../components_css/QuizPage.css";
@@ -46,6 +46,7 @@ export default function QuizPage() {
   const [questionResults, setQuestionResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const handleSkipRef = useRef(() => {});
 
   useEffect(() => {
     setLoading(true);
@@ -89,12 +90,11 @@ export default function QuizPage() {
     return () => clearInterval(timerId);
   }, [effectiveTimer, questions.length]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (timeLeft === 0 && effectiveTimer !== "none" && questions.length) {
-      handleSkip();
+      handleSkipRef.current();
     }
-  }, [timeLeft]);
+  }, [timeLeft, effectiveTimer, questions.length]);
 
   useEffect(() => {
     setSelectedOption(null);
@@ -162,7 +162,7 @@ export default function QuizPage() {
     setQuestionResults([...questionResults, newResult]);
   };
 
-  function handleSkip() {
+  handleSkipRef.current = () => {
     if (difficulty === "hard") {
       return;
     }
@@ -175,11 +175,15 @@ export default function QuizPage() {
         correct: false,
         skipped: true,
       };
-      setQuestionResults([...questionResults, newResult]);
+      setQuestionResults((prevResults) => [...prevResults, newResult]);
     }
 
     goToNextQuestion();
-  }
+  };
+
+  const handleSkip = () => {
+    handleSkipRef.current();
+  };
 
   const handleHint = () => {
     if (hintCount <= 0 || !currentQuestion) {
