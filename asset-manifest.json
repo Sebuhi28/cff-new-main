@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/cff-new-main/static/css/main.32d2a03a.css",
-    "main.js": "/cff-new-main/static/js/main.be5fbc3f.js",
+    "main.js": "/cff-new-main/static/js/main.f596d7fe.js",
     "static/media/anime.png": "/cff-new-main/static/media/anime.5e6c9f4cd97d51788531.png",
     "static/media/genknow.png": "/cff-new-main/static/media/genknow.e969226134ff8ad57cd1.png",
+    "static/media/gaming.png": "/cff-new-main/static/media/gaming.ad30b1b9bbbfb6457305.png",
+    "static/media/car.png": "/cff-new-main/static/media/car.2a646b980b4313f5e86c.png",
     "static/media/javascript.png": "/cff-new-main/static/media/javascript.266bd9fb2663dcc057b4.png",
     "index.html": "/cff-new-main/index.html",
     "main.32d2a03a.css.map": "/cff-new-main/static/css/main.32d2a03a.css.map",
-    "main.be5fbc3f.js.map": "/cff-new-main/static/js/main.be5fbc3f.js.map"
+    "main.f596d7fe.js.map": "/cff-new-main/static/js/main.f596d7fe.js.map"
   },
   "entrypoints": [
     "static/css/main.32d2a03a.css",
-    "static/js/main.be5fbc3f.js"
+    "static/js/main.f596d7fe.js"
   ]
 }
