@@ -10,6 +10,9 @@ import history from "../assets/history.png";
 import javascript from "../assets/javascript.png";
 import movies from "../assets/movies.png";
 import science from "../assets/science.png";
+import football from "../assets/football.png";
+import gaming from "../assets/gaming.png";
+import car from "../assets/car.png";
 
 const categories = [
   { name: "Anime", slug: "anime", image: anime, description: "Test your anime knowledge and trivia", questions: 10 },
@@ -19,6 +22,9 @@ const categories = [
   { name: "JavaScript", slug: "javascript", image: javascript, description: "Language quirks and APIs", questions: 10 },
   { name: "Movies", slug: "movies", image: movies, description: "Film trivia and actors", questions: 10 },
   { name: "Science", slug: "science", image: science, description: "Test your knowledge of scientific facts and discoveries", questions: 10 },
+  { name: "Football", slug: "football", image: football, description: "Soccer trivia and players", questions: 10 },
+  { name: "Gaming", slug: "gaming", image: gaming, description: "Video game trivia and lore", questions: 10 },
+  { name: "Cars", slug: "automotive", image: car, description: "Automotive trivia and specifications", questions: 10 }
 ];
 
 export default function HomePage() {

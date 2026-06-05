@@ -82,6 +82,42 @@ const quizData = {
     { id: 8, question: "Yer kürəsinin cazibə qüvvəsi sabitini (g) kim kəşf edib?", options: ["Galileo Galilei", "Isaac Newton", "Kepler", "Copernicus"], correctAnswer: 1 },
     { id: 9, question: "Bitkilərin günəş işığından enerji istehsal etməsi prosesi necə adlanır?", options: ["Respirasiya", "Fotosintez", "Fermentasiya", "Oksidləşmə"], correctAnswer: 1 },
     { id: 10, question: "Dövri cədvəldə neçə təbii element var?", options: ["92", "118", "56", "84"], correctAnswer: 0 }
+  ],
+  automotive: [
+    { id: 1, question: "Hyundai Santa Fe 2016-cı il modelində adətən hansı dizel mühərrik həcmi geniş yayılıb?", options: ["1.6 CRDi", "2.0 CRDi / 2.2 CRDi", "3.0 V6", "1.4 MPI"], correctAnswer: 1 },
+    { id: 2, question: "At gücü (Horsepower) nəyi ifadə edir?", options: ["Mühərrikin gücünü", "Maşının çəkisini", "Maksimum sürəti", "Yanacaq çəninin həcmini"], correctAnswer: 0 },
+    { id: 3, question: "Avtomobillərdə 'ABS' sisteminin əsas funksiyası nədir?", options: ["Sürəti artırmaq", "Əyləcləmə zamanı təkərlərin kilidlənməsini önləmək", "Yanacağa qənaət", "Kondisioneri idarə etmək"], correctAnswer: 1 },
+    { id: 4, question: "Elektrikli avtomobil istehsalçısı Tesla-nın qurucusu kimdir?", options: ["Elon Musk", "Henry Ford", "Enzo Ferrari", "Bill Gates"], correctAnswer: 0 },
+    { id: 5, question: "Formula 1 yarışlarında 'Skuderiya' adı ilə tanınan komanda hansıdır?", options: ["Mercedes", "McLaren", "Ferrari", "Red Bull"], correctAnswer: 2 },
+    { id: 6, question: "Daxili yanma mühərriklərində alışmanı təmin edən hissə hansıdır?", options: ["Karbürator", "Şam (Spark plug)", "Radiator", "Karter"], correctAnswer: 1 },
+    { id: 7, question: "Baku City Circuit hansı idman növünə ev sahibliyi edir?", options: ["Futbol", "Formula 1", "Tennis", "Velosiped"], correctAnswer: 1 },
+    { id: 8, question: "Avtomobildə mühərrikin dövrlər sayını (RPM) göstərən cihaz necə adlanır?", options: ["Spidometr", "Taxometr", "Odometrir", "Barometr"], correctAnswer: 1 },
+    { id: 9, question: "Hansı marka Almaniyaya məxsus deyil?", options: ["BMW", "Audi", "Hyundai", "Porsche"], correctAnswer: 2 },
+    { id: 10, question: "Avtomobildə fırlanma anını təkərlərə ötürən sistem nədir?", options: ["Transmissiya (Sürətlər qutusu)", "Asqı sistemi", "Sükan mexanizmi", "Əyləc kaliperi"], correctAnswer: 0 }
+  ],
+  anime: [
+    { id: 1, question: "'Naruto' animesində baş qəhrəmanın ən böyük xəyalı nədir?", options: ["Hokage olmaq", "Zəngin olmaq", "Dünyanı gəzmək", "Samuray olmaq"], correctAnswer: 0 },
+    { id: 2, question: "Death Note animesində ölüm dəftərinin əsl sahibi olan ölüm mələyi (Shinigami) kimdir?", options: ["Ryuk", "Rem", "L", "Light"], correctAnswer: 0 },
+    { id: 3, question: "Attack on Titan-da baş qəhrəman Eren Yeager hansı titana çevrilə bilir?", options: ["Armored Titan", "Colossal Titan", "Attack Titan", "Beast Titan"], correctAnswer: 2 },
+    { id: 4, question: "One Piece-də Luffy-nin yediyi şeytan meyvəsi ona hansı xüsusiyyəti verir?", options: ["Od çıxarmaq", "Rezin bədən", "Görünməzlik", "Uçmaq"], correctAnswer: 1 },
+    { id: 5, question: "Demon Slayer animesində Tanjironun bacısının adı nədir?", options: ["Nezuko", "Sakura", "Hinata", "Mikasa"], correctAnswer: 0 },
+    { id: 6, question: "Oskar mükafatı qazanmış yeganə anime hansıdır?", options: ["Spirited Away", "Your Name", "A Silent Voice", "Princess Mononoke"], correctAnswer: 0 },
+    { id: 7, question: "Fullmetal Alchemist-də Edvurd və Alfons qardaşları nəyi geri qaytarmağa çalışırlar?", options: ["Bədənlərini", "İtmiş qılınclarını", "Krallıqlarını", "Atalarını"], correctAnswer: 0 },
+    { id: 8, question: "Jujutsu Kaisen animesində 'Ən güclü şaman' kim qəbul edilir?", options: ["Yuji Itadori", "Megumi Fushiguro", "Satoru Gojo", "Sukuna"], correctAnswer: 2 },
+    { id: 9, question: "Dragon Ball seriyasının baş qəhrəmanı kimdir?", options: ["Vegeta", "Goku", "Gohan", "Piccolo"], correctAnswer: 1 },
+    { id: 10, question: "Bleach animesində İchigo Kurosakinin silahı (Zanpakuto) nə adlanır?", options: ["Zangetsu", "Muramasa", "Samehada", "Excalibur"], correctAnswer: 0 }
+  ],
+  gaming: [
+    { id: 1, question: "PUBG Mobile oyununda xəritəyə enərkən maksimum neçə nəfər bir matçda iştirak edir?", options: ["50", "60", "100", "150"], correctAnswer: 2 },
+    { id: 2, question: "Minecraft-da hansı materialla portal düzəldib 'Nether' (Cəhənnəm) dünyasına getmək olar?", options: ["Diamond", "Obsidian", "Bedrock", "Iron"], correctAnswer: 1 },
+    { id: 3, question: "The Witcher 3: Wild Hunt oyununda Geraltın övladlığı kimi gördüyü qız kimdir?", options: ["Yennefer", "Triss", "Ciri", "Shani"], correctAnswer: 2 },
+    { id: 4, question: "GTA V oyununda neçə əsas idarə olunan personaj var?", options: ["1", "2", "3", "4"], correctAnswer: 2 },
+    { id: 5, question: "Counter-Strike oyununda bombanı quran tərəf hansıdır?", options: ["Terrorists (T)", "Counter-Terrorists (CT)", "Hostages", "Spectators"], correctAnswer: 0 },
+    { id: 6, question: "League of Legends (LoL) oyununda əsas məqsəd rəqibin hansı tikilisini dağıtmaqdır?", options: ["Tower", "Inhibitor", "Nexus", "Baron"], correctAnswer: 2 },
+    { id: 7, question: "God of War (2018) oyununda Kratos hansı mifologiyaya keçid edir?", options: ["Yunan", "Misir", "Skandinaviya (Norse)", "Roma"], correctAnswer: 2 },
+    { id: 8, question: "Dota 2 oyununda hər il keçirilən ən böyük turnir necə adlanır?", options: ["The International", "Worlds", "Major", "Intel Extreme Masters"], correctAnswer: 0 },
+    { id: 9, question: "Cyberpunk 2077 oyununda Conni Silverhend (Johnny Silverhand) personajını hansı aktyor canlandırıb?", options: ["Keanu Reeves", "Idris Elba", "Tom Hardy", "Brad Pitt"], correctAnswer: 0 },
+    { id: 10, question: "Elden Ring oyununun janrı hansıdır?", options: ["FPS", "Action RPG (Soulslike)", "RTS", "Sport"], correctAnswer: 1 }
   ]
 };
 
